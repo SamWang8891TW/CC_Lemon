@@ -6,7 +6,7 @@ int main() {
     printf("x=?");
     scanf("%d", &number);
 
-    printf("An int variable is decleaed with value %d and it is allocated at memory address %p.\n", number, (void *)&number);
+    printf("An int variable is declared with value %d and it is allocated at memory address %p.\n", number, (void *)&number);
 
     return 0;
 }
