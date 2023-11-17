@@ -9,7 +9,7 @@
 
 int main(){
     int cards[52][2] = {0}; 
-    //第一層陣列用以儲存數字級jqk，第二層用以儲存花色(1=hearts，2=diamonds，3=clubs，4=spades)。1 = Ace, 11 = Jack, 12 = Queen, 13 = King
+    //第一層陣列用以儲存數字及jqk，第二層用以儲存花色(1=hearts，2=diamonds，3=clubs，4=spades)。1 = Ace, 11 = Jack, 12 = Queen, 13 = King
     //哈哈我撲克牌就是爛，那個hearts diamonds什麼的中文你們就自己查吧
     srand(time(NULL));
 
@@ -29,7 +29,7 @@ RECHOOSE:
     }
 
     for(int i = 0; i<52; i++){
-        switch(cards[i][1]){
+        switch(cards[i][1]){ //印出花色
             case 1:
                 printf("%s", heart); //看一下上面的define
                 break;
@@ -44,7 +44,7 @@ RECHOOSE:
                 break;
         }
         
-        switch(cards[i][0]){
+        switch(cards[i][0]){ //印出數字（或A T J Q K）
             case 1:
                 printf("A ");
                 break;
@@ -64,7 +64,7 @@ RECHOOSE:
             printf("%d ", cards[i][0]);    
         }
 
-        if((i+1)%13 == 0)
+        if((i+1)%13 == 0) //換行條件
             printf("\n");
     }
 
