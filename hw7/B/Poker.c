@@ -61,7 +61,7 @@ RECHOOSE:
                 printf("K ");
                 break;
             default:
-            printf("%d ", cards[i][0]);    
+                printf("%d ", cards[i][0]);    
         }
 
         if((i+1)%13 == 0) //換行條件
