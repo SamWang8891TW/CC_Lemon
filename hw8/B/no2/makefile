@@ -2,10 +2,10 @@ CC = gcc
 
 all: a.out
 
-a.out: tools.o Main.o
+a.out: Permutation.o Main.o
 	$(CC) -o a.out Permutation.o Main.o
 
-tools.o: Permutation.c Permutation.h
+Permutation.o: Permutation.c Permutation.h
 	$(CC) -c Permutation.c
 
 Main.o: Main.c Permutation.h
